@@ -1,0 +1,14 @@
+
+http://www.speech.cs.cmu.edu/cgi-bin/cmudict?in=
+https://web.archive.org/web/20151003175728/http://www.tc.umn.edu/~munso005/ConfusionMatrices.pdf
+https://linguistics.stackexchange.com/questions/14431/which-ipa-sounds-are-similar
+https://en.wikipedia.org/wiki/International_Phonetic_Alphabet
+https://en.wikipedia.org/wiki/ARPABET
+https://github.com/open-dict-data/ipa-dict/blob/master/data/en_US.txt
+
+https://www.kaggle.com/rtatman/english-word-frequency
+https://en.wikipedia.org/wiki/Trie
+https://english.stackexchange.com/questions/230900/confusion-matrix-for-english-phonemes
+https://corpustools.readthedocs.io/en/latest/string_similarity.html#phonological-edit-distance
+
+incoherent board game
