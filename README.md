@@ -11,7 +11,7 @@ A Python module for phonetic matching
 ## Usage Examples
 ### Convert a string to list of phonemes
 ```python
->>> PhonemePhraser
+>>> import PhonemePhraser
 >>> example_phrase = "Wave the sails"
 >>> PhonemePhraser.to_phonetic(example_phrase)
 [u'W', u'EY', u'V', u'DH', u'AH', u'S', u'EY', u'L', u'Z']
@@ -19,7 +19,7 @@ A Python module for phonetic matching
 
 ### Rewrite a string phonetically
 ```python
->>> PhonemePhraser
+>>> import PhonemePhraser
 >>> example_phrase = "Wave the sails"
 >>> phoneme_list = PhonemePhraser.to_phonetic(example_phrase)
 >>> PhonemePhraser.rephrase(phoneme_list)
