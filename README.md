@@ -27,8 +27,8 @@ A Python module for phonetic matching
 ```
 
 ## References
-<https://en.wikipedia.org/wiki/Phoneme>
-<https://en.wikipedia.org/wiki/ARPABET>
-<http://www.speech.cs.cmu.edu/cgi-bin/cmudict?in=>
-<https://www.kaggle.com/rtatman/english-word-frequency>
-<https://en.wikipedia.org/wiki/Trie>
+<https://en.wikipedia.org/wiki/Phoneme>  
+<https://en.wikipedia.org/wiki/ARPABET>  
+<http://www.speech.cs.cmu.edu/cgi-bin/cmudict?in=>  
+<https://www.kaggle.com/rtatman/english-word-frequency>  
+<https://en.wikipedia.org/wiki/Trie>  
