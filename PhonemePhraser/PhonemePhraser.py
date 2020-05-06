@@ -30,7 +30,6 @@ def to_phonetic(phrase):
 
 
 def rephrase(phrase, current_trie = root_trie, verbose=False):
-	new_phrase = []
 	phoneme = phrase[0]
 	current_trie = current_trie.children[phoneme]
 	if verbose:
@@ -75,6 +74,39 @@ def rephrase(phrase, current_trie = root_trie, verbose=False):
 		selections.pop(selection_index)
 		probabilities.pop(selection_index)
 	return []
+
+
+def all_phrases(phrase, current_trie = root_trie, verbose=False):
+	phrases = []
+	phoneme = phrase[0]
+	current_trie = current_trie.children[phoneme]
+	if verbose:
+		print 'Phoneme: ' + phoneme
+		print 'Leaves: ' + str(current_trie.leaves)
+		print 'Children: ' + str(current_trie.children.keys())
+
+	next_trie = None if not phrase[1:] or phrase[1] not in current_trie.children else current_trie.children[phrase[1]]
+	selections = [] if not next_trie else [None]
+	selections += current_trie.leaves.keys()
+	for selection in selections:
+		if verbose:
+			print 'Selections: ' + str(selections)
+			print 'Selection: ' + str(selection)
+			print ''
+		# Was a word chosen?
+		if isinstance(selection, str) or isinstance(selection, unicode):
+			# At the end of the phrase?
+			if not phrase[1:]:
+				phrases.append([selection])
+				continue
+			# Is there a valid following phrase?
+			following_phrases = all_phrases(phrase[1:], verbose=verbose)
+			for following_phrase in following_phrases:
+				phrases.append([selection] + following_phrase)
+		# Otherwise next syllable
+		else:
+			phrases += all_phrases(phrase[1:], current_trie = current_trie, verbose=verbose)
+	return phrases
 
 
 
